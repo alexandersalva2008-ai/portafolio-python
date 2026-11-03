@@ -1,0 +1,11 @@
+tiendas:
+  - tienda: tienda_a
+    url: ejemplos/tienda_a.html
+    contenedor: "div.producto"
+    nombre: "h3.titulo"
+    precio: "span.precio"
+  - tienda: tienda_b
+    url: ejemplos/tienda_b.html
+    contenedor: "article.item"
+    nombre: "h2.nombre"
+    precio: "b.precio"
