@@ -2,7 +2,6 @@
 
 ![Resultado del resumen](captura.png)
 
-
 ## Problema
 Un despacho contable con 40 clientes recibe cientos de XML al mes y los captura a mano.
 Este script consolida los comprobantes de ingreso en un Excel: totales por cliente, por mes y detalle.
