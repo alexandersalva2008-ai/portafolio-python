@@ -1,5 +1,7 @@
 # Extractor de precios a Excel con historial
 
+![Resultado de la extraccion](captura.png)
+
 ## Problema
 Una comercializadora revisa a mano los precios de sus competidores cada mañana.
 Este script los extrae, los guarda con fecha en una base local y entrega un Excel.

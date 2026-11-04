@@ -1,4 +1,6 @@
-﻿# 02-resumen-cfdi
+# 02-resumen-cfdi
+
+![Resultado del resumen](captura.png)
 
 
 ## Problema
