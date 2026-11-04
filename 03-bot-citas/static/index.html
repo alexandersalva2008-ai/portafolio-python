@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agendar cita</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 420px; margin: 40px auto; padding: 0 16px; }
+    label { display: block; margin-top: 14px; font-size: 14px; }
+    input, select, button { width: 100%; padding: 10px; margin-top: 4px; box-sizing: border-box; }
+    button { margin-top: 20px; background: #4b1fa8; color: #fff; border: 0; cursor: pointer; }
+    #msg { margin-top: 16px; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <h1>Agendar cita</h1>
+  <form id="f">
+    <label>Nombre<input name="nombre" required></label>
+    <label>Telefono<input name="telefono" required></label>
+    <label>Servicio
+      <select name="servicio">
+        <option>Consulta</option>
+        <option>Revision</option>
+        <option>Entrega</option>
+      </select>
+    </label>
+    <label>Fecha y hora<input name="fecha_hora" type="datetime-local" required></label>
+    <button>Agendar</button>
+  </form>
+  <p id="msg"></p>
+  <script>
+    document.getElementById('f').onsubmit = async (e) => {
+      e.preventDefault();
+      const d = Object.fromEntries(new FormData(e.target));
+      const r = await fetch('/citas', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(d)
+      });
+      document.getElementById('msg').textContent = r.ok
+        ? 'Cita agendada. Folio: ' + (await r.json()).id
+        : 'Error al agendar';
+      if (r.ok) e.target.reset();
+    };
+  </script>
+</body>
+</html>

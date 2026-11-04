@@ -12,6 +12,7 @@ Trabajo **local**: los datos del cliente no salen de su computadora. Precio cerr
 |---|---|
 | [01 - Extractor de precios](01-extractor-precios/) | Extrae precios de competidores a Excel con historial. |
 | [02 - Resumen de CFDI](02-resumen-cfdi/) | Consolida cientos de XML en un Excel por cliente y por mes. Sin captura manual. |
+| [03 - Bot de citas](03-bot-citas/) | Agenda citas por formulario y avisa por Telegram de las próximas 24 horas. |
 
 ## Servicios
 
